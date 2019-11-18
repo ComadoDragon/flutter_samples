@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_samples/animation/animation_main_page.dart';
 import 'package:flutter_samples/clip/clip_main_page.dart';
 
 void main() => runApp(MyApp());
@@ -38,6 +39,10 @@ class _MyHomePageState extends State<MyHomePage> {
           FlatButton(
             onPressed: () => Navigator.push(context, MaterialPageRoute(builder: (BuildContext context) => ClipMainPage()),),
             child: Text("Clip Demo"),
+          ),
+          FlatButton(
+            onPressed: () => Navigator.push(context, MaterialPageRoute(builder: (BuildContext context) => AnimationMainPage()),),
+            child: Text("Animation Demo"),
           ),
         ],
       ),
