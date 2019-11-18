@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_samples/animation/animation_a_page_route_transition_page.dart';
 import 'package:flutter_samples/animation/fade_a_widget_in_and_out.dart';
+import 'package:flutter_samples/animation/menu_dashboard.dart';
 import 'package:flutter_samples/animation/physics_card_drag_demo.dart';
 
 class AnimationMainPage extends StatelessWidget {
@@ -27,6 +28,10 @@ class AnimationMainPage extends StatelessWidget {
           FlatButton(
             onPressed: () => Navigator.push(context, MaterialPageRoute(builder: (BuildContext context) => FadeAWidgetInAndOut(title: "Fade a widget in and out",)),),
             child: Text("Fade a widget in and out"),
+          ),
+          FlatButton(
+            onPressed: () => Navigator.push(context, MaterialPageRoute(builder: (BuildContext context) => MenuDashboard()),),
+            child: Text("Menu DashBoard"),
           ),
         ],
       ),
