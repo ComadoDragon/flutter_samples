@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_samples/animation/animation_main_page.dart';
 import 'package:flutter_samples/clip/clip_main_page.dart';
+import 'package:flutter_samples/main_menu.dart';
+import 'package:flutter_samples/routes.dart';
 
 void main() => runApp(MyApp());
 
@@ -12,7 +14,8 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: MyHomePage(title: 'Flutter Demo Home Page'),
+      initialRoute: '/',
+      routes: Routes.routes,
     );
   }
 }
@@ -34,18 +37,7 @@ class _MyHomePageState extends State<MyHomePage> {
       appBar: AppBar(
         title: Text(widget.title),
       ),
-      body: Column(
-        children: <Widget>[
-          FlatButton(
-            onPressed: () => Navigator.push(context, MaterialPageRoute(builder: (BuildContext context) => ClipMainPage()),),
-            child: Text("Clip Demo"),
-          ),
-          FlatButton(
-            onPressed: () => Navigator.push(context, MaterialPageRoute(builder: (BuildContext context) => AnimationMainPage()),),
-            child: Text("Animation Demo"),
-          ),
-        ],
-      ),
+      body: MainMenu(),
     );
   }
 }
